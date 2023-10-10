@@ -1,7 +1,15 @@
 <script>
 
+import {menuHeader, menuFontAweHeader} from '../data/menuHeader'
+
 export default {
-  name:'Header'
+  name:'Header',
+  data(){
+    return{
+      menuHeader,
+      menuFontAweHeader
+    }
+  }
 }
 </script>
 
@@ -10,20 +18,20 @@ export default {
     <div class="menu">
         <div class="row container">
           <div class="type">
-           <ul>
-            <li><a href="#">Donna</a></li>
-            <li><a href="#">Uomo</a></li>
-            <li><a href="#">Bambino</a></li>
-           </ul>
+            <ul>
+              <li v-for="(item, index) in menuHeader" :key="index">
+                <a :href="item.href">{{ item.text }}</a>
+              </li>
+            
+            </ul>
           </div>
 
           <img src="/public/boolean-logo.png" alt="logo">
 
           <div class="icons">
             <ul>
-              <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
-              <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-              <li><a href="#"><i class="fa-solid fa-bag-shopping"></i></a></li>
+              <li v-for="(item,index) in menuFontAweHeader" :key="index"><a :href=item.href><i :class=item.font></i></a></li>
+              
             </ul>
           </div>
         </div>

@@ -114,16 +114,16 @@ section{
       right: 5px;
       font-size:25px;
       padding: 10px 15px;
+        &:hover{
+        color: red;
+        }
     }
     .garment{
       display: block;
       font-weight: 700;
       text-transform: uppercase;
     }
-    .red{
-      color: red;
-      font-weight: 600;
-    }
+    
   }
 }
 
@@ -136,8 +136,11 @@ section{
     padding: 5px 8px;
     color: white;
     font-weight: 700;
-    }&:hover{
+    }
+    
+    .red{
       color: red;
+      font-weight: 600;
     }
 }
 

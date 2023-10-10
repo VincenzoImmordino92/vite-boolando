@@ -1,7 +1,16 @@
 <script>
 
+import {menuHeader, menuFontAweHeader, menuFontAweFooter} from '../data/menuHeader'
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data(){
+    return{
+      menuHeader,
+      menuFontAweHeader,
+      menuFontAweFooter
+    }
+  }
 }
 </script>
 
@@ -18,11 +27,10 @@ export default {
 
         <div class="social">
           <h5>Trovaci anche su</h5>
-          <a href=""><i class="fa-brands fa-square-twitter"></i></a>
-          <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-          <a href=""><i class="fa-brands fa-square-instagram"></i></a>
-          <a href=""><i class="fa-brands fa-square-pinterest"></i></a>
-          <a href=""><i class="fa-brands fa-square-youtube"></i></a>
+          <a v-for="(item, index) in menuFontAweFooter" :key="index" :href="item.href">
+            <i :class="item.font"></i>
+          </a>
+          
         </div>
 
       </div>

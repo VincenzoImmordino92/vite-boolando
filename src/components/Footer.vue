@@ -40,29 +40,29 @@ export default {
   </footer>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .foot {
   height: 100px;
   width: 100%;
   background-color: rgb(24, 23, 23);
   margin-top: 60px;
   align-items: center;
-
-
-}
-
-.foot .bottom-foot {
-  justify-content: space-between;
-  color: white;
-}
-
-h3,
-h5 {
+      .bottom-foot {
+        justify-content: space-between;
+        color: white;
+      }
+  h3,h5 {
   padding: 15px 0px;
-}
-
-a {
+  }
+  a {
   padding: 0px 4px;
   color: white;
+  }
 }
+
+
+
+
+
+
 </style>
